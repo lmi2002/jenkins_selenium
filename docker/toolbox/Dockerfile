@@ -8,7 +8,7 @@ RUN  ls -l /var/lib/
 
 RUN mkdir -p /usr/jenkins/selenium_test/
 
-COPY . /selenium_test /usr/jenkins/selenium_test/
+COPY . /usr/jenkins/selenium_test/
 
 
 RUN \
