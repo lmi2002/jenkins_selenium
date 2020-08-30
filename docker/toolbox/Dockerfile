@@ -5,7 +5,7 @@ ENV LATEST_RELEASE =  '85.0.4183.87'
 ENV CHROME="\
   https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
-RUN apt-get pip install
+RUN apt-get install pip
 
 RUN pip install -r requirements.txt
 
