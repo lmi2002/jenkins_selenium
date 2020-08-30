@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 
 
-RUN ls -l
+RUN apt-get update
+RUN apt-get install -y git python-virtualenv
 
 
 
