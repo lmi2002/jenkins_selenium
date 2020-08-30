@@ -1,4 +1,4 @@
-FROM ubuntu:18.4
+FROM ubuntu:18.04
 
 
 
