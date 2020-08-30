@@ -8,6 +8,6 @@ COPY . /usr/selenim_test/
 
 WORKDIR /usr/selenim_test/test/
 
-RUN ls -la
+RUN ls
 
 CMD ['pwd']
