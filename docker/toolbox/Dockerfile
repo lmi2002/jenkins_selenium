@@ -1,7 +1,13 @@
 FROM ubuntu:18.04
 
-RUN apt-get python 3.6
+ENV PACKAGES="\
+  python3.6 \
+  xvfb \
+"
 
-
+RUN \
+apt-get update && \
+apt-get install -y ${PACKAGES} && \
+apt-get autoremove
 
 
