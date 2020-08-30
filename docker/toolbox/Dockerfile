@@ -4,7 +4,7 @@ ENV PACKAGES="\
   python3.6 \
   xvfb \
 "
-RUN ls -l
+RUN /usr/ ls -l
 
 RUN mkdir -p /usr/jenkins/selenium_test/
 
