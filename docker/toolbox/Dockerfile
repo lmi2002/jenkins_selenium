@@ -4,6 +4,7 @@ ENV PACKAGES="\
   python3.6 \
   xvfb \
 "
+RUN mkdir -p /usr/jenkins/selenium_test/
 
 RUN \
 apt-get update && \
