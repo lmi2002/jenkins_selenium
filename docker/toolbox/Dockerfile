@@ -6,6 +6,6 @@ WORKDIR /usr/selenim_test/
 
 COPY . /usr/selenim_test/
 
-WORKDIR /usr/selenim_test/test
+WORKDIR /usr/selenim_test/test/
 
-CMD ['pytest -m smoke']
+CMD ['pytest', 'test_exist.py']
