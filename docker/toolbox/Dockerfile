@@ -9,7 +9,6 @@ ENV PACKAGES="\
   curl \
   git \
   python3.6 \
-  pip \
   unzip \
   wget \
   xdg-utils \
