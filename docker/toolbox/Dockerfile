@@ -9,7 +9,6 @@ ENV PACKAGES="\
   xvfb \
 "
 ENV REQUIREMENTS="\
-  pyScreeze \
   pytest \
   selenium \
 "
