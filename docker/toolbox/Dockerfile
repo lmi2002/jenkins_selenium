@@ -8,4 +8,6 @@ COPY . /usr/selenim_test/
 
 WORKDIR /usr/selenim_test/test/
 
+RUN echo pwd
+
 CMD ['pytest', 'test_exist.py']
