@@ -10,6 +10,8 @@ apt-get update && \
 apt-get install -y ${PACKAGES} && \
 apt-get autoremove
 
+WORKDIR /jenkins/
+
 RUN ls -l
 
 
