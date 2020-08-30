@@ -1,9 +1,9 @@
 FROM python:3.6
 
-RUN mkdir -p /usr/src/app/
+RUN mkdir -p /usr/selenim_test/
 
-WORKDIR /usr/src/app/
+WORKDIR /usr/selenim_test/
 
-COPY . /usr/src/app/
+COPY . /usr/selenim_test/
 
 CMD ['python', 'app.py']
