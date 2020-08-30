@@ -9,10 +9,11 @@ ENV PACKAGES="\
   xvfb \
 "
 ENV REQUIREMENTS="\
-  pyScreeze \
   pytest \
   selenium \
 "
+ADD https://github.com/lmi2002/jenkins_selenium.git /root/
+
 RUN ls -l
 
 
