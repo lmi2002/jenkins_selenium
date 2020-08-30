@@ -6,4 +6,4 @@ WORKDIR /usr/selenim_test/
 
 COPY . /usr/selenim_test/
 
-CMD ['python', 'app.py']
+CMD ['pytest -m smoke']
