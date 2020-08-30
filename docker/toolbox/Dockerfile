@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 
 RUN apt-get update
-RUN apt-get install python 3.6
+RUN apt-get install python 3.7
 RUN python --version
 WORKDIR /home/
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
