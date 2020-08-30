@@ -14,9 +14,9 @@ ENV REQUIREMENTS="\
   selenium \
 "
 RUN \
-apt-get update && \
-apt-get install -y ${PACKAGES} && \
-apt-get autoremove
+apt update && \
+apt install -y ${PACKAGES} && \
+apt autoremove
 
 
 WORKDIR /home/
