@@ -6,4 +6,6 @@ WORKDIR /usr/selenim_test/
 
 COPY . /usr/selenim_test/
 
+WORKDIR /usr/selenim_test/test
+
 CMD ['pytest -m smoke']
