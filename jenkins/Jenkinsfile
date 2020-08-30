@@ -10,8 +10,13 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
-                	sh 'docker build . '
+                	sh 'docker build -t "xvfb-python" . '
                 }
+            }
+        }
+        stage('Run and archive') {
+            steps {
+                sh 'docker run --rm -t xvfb-python'
             }
         }
 
