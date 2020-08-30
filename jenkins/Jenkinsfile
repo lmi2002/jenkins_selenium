@@ -14,11 +14,5 @@ pipeline {
                 }
             }
         }
-        stage('Run and archive') {
-            steps {
-                sh 'docker run --rm -t xvfb-python'
-            }
-        }
-
     }
 }
