@@ -5,7 +5,8 @@ RUN apt-get update
 RUN apt-get install -y git python-virtualenv
 WORKDIR /home/
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
-RUN ls -l /home/jenkins_selenium/jenkins/
+RUN ls -l /home/jenkins_selenium/selenium_test/tests/
+CMD ["pytest", "test_exist.py" ]
 
 
 
