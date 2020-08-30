@@ -5,7 +5,7 @@ WORKDIR /home/selenium_test/
 
 COPY . /home/selenium_test/
 
-RUN ls -l /home/selenium_test/
+RUN ls /home/selenium_test/
 
 
 
