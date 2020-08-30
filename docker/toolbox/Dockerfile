@@ -6,12 +6,15 @@ ENV PACKAGES="\
 "
 RUN mkdir -p /usr/jenkins/selenium_test/
 
+COPY . /usr/jenkins/selenium_test/
+
+
 RUN \
 apt-get update && \
 apt-get install -y ${PACKAGES} && \
 apt-get autoremove
 
-WORKDIR /jenkins/
+WORKDIR /usr/jenkins/selenium_test/
 
 RUN ls -l
 
