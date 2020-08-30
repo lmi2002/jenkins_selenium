@@ -1,11 +1,28 @@
-FROM python
+FROM ubuntu:18.04
 
-RUN ls -l /usr/bin/env
-#WORKDIR /home/
-#RUN git clone https://github.com/lmi2002/jenkins_selenium.git
-#RUN pip install -r requirements.txt
-#WORKDIR /home/jenkins_selenium/selenium_test/tests/
-#CMD ["pytest", "test_exist.py"]
+ENV PACKAGES="\
+  curl \
+  python3.7 \
+  unzip \
+  wget \
+  xdg-utils \
+  xvfb \
+"
+ENV REQUIREMENTS="\
+  pyScreeze \
+  pytest \
+  selenium \
+"
+RUN \
+apt-get update && \
+apt-get install -y ${PACKAGES} && \
+apt-get autoremove
+
+
+WORKDIR /home/
+RUN git clone https://github.com/lmi2002/jenkins_selenium.git
+WORKDIR /home/jenkins_selenium/selenium_test/tests/
+CMD ["pytest", "test_exist.py"]
 
 
 
