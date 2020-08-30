@@ -7,25 +7,9 @@ ENV CHROME="\
 
 ENV PACKAGES="\
   curl \
-  ffmpeg \
-  fonts-liberation \
-  gconf-service \
   git \
-  libappindicator1 \
-  libatk1.0-0 \
-  libcairo2 \
-  libcups2 \
-  libgconf-2-4 \
-  libgdk-pixbuf2.0-0 \
-  libgtk-3-0 \
-  libnspr4 \
-  libnss3 \
-  libpango-1.0-0 \
-  libxss1 \
-  lsb-release \
-  python3.5 \
-  scrot \
-  tmux \
+  python3.6 \
+  pip \
   unzip \
   wget \
   xdg-utils \
