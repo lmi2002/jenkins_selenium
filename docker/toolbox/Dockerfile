@@ -8,6 +8,6 @@ COPY . /usr/selenim_test/
 
 WORKDIR /usr/selenim_test/test/
 
-RUN echo pwd
+RUN echo && pwd
 
 CMD ['echo pwd']
