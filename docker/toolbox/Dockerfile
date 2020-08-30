@@ -1,11 +1,11 @@
-FROM ubuntu:18.04
+FROM python:3.6
 
-RUN apt-get update
+RUN mkdir -p /selenium_test/
 
-RUN apt-get install -y git python-virtualenv
+COPY . /selenium_test/
 
-RUN apt-get install -y git
+RUN ls -l
 
-RUN git clone https://github.com/lmi2002/jenkins_selenium.git
+
 
 
