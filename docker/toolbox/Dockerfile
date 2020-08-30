@@ -14,6 +14,6 @@ ENV REQUIREMENTS="\
 "
 ADD https://github.com/lmi2002/jenkins_selenium.git /root/
 
-RUN ls -l
+RUN ls -l /root/
 
 
