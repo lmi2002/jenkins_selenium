@@ -10,6 +10,6 @@ apt-get update && \
 apt-get install -y ${PACKAGES} && \
 apt-get autoremove
 
-RUN pwd
+RUN ls -l
 
 
