@@ -6,7 +6,7 @@ ENV PACKAGES="\
 "
 RUN mkdir -p /usr/jenkins/selenium_test/
 
-COPY . /usr/jenkins/selenium_test/
+COPY .. /usr/jenkins/selenium_test/
 
 
 RUN \
