@@ -1,6 +1,6 @@
 FROM python
 
-RUN ls -l /bin/
+RUN ls -l /usr/bin/env
 #WORKDIR /home/
 #RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 #RUN pip install -r requirements.txt
