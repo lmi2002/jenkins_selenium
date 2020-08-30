@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM ubuntu:18.04
 
 
 RUN ls -l
