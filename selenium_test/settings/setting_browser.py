@@ -7,7 +7,7 @@ class SettingBrowser:
     executable_path = {
         "chrome": {
             "windows": os.path.abspath('../drivers/chromedriver.exe'),
-            "linux": '/web_drivers/chromedriver'
+            "linux": '/usr/local/bin/chromedriver'
         }
     }
 
