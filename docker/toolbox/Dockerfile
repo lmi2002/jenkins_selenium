@@ -8,6 +8,7 @@ ENV PACKAGES="\
   git \
   xdg-utils \
   xvfb \
+  sudo \
 "
 ENV REQUIREMENTS="\
   pytest \
