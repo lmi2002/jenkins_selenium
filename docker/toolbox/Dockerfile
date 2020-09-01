@@ -9,7 +9,6 @@ ENV PACKAGES="\
   git \
   xdg-utils \
   xvfb \
-  gnupg \
 "
 ENV REQUIREMENTS="\
   pytest \
