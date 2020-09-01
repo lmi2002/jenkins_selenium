@@ -1,5 +1,8 @@
 FROM ubuntu:18.04
 
+ENV CHROME="\
+  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+
 ENV PACKAGES="\
   curl \
   python3.7 \
@@ -18,12 +21,12 @@ apt update && \
 apt install -y ${PACKAGES} && \
 apt autoremove
 
+RUN \
+  curl ${CHROME} -o chrome.deb -s ; \
+  dpkg -i chrome.deb && \
+  rm chrome.deb
+
 RUN whoami
-
-# Set up the Chrome
-RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    dpkg -i google-chrome-stable_current_amd64.deb
-
 
 WORKDIR /home/
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
