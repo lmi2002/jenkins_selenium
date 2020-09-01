@@ -1,7 +1,5 @@
 FROM ubuntu:18.04
 
-ENV CHROME="\
-  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
 ENV PACKAGES="\
   curl \
@@ -21,8 +19,12 @@ apt update && \
 apt install -y ${PACKAGES} && \
 apt autoremove
 
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+RUN \
+  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+  echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list && \
+  apt-get update && \
+  apt-get install -y google-chrome-stable && \
+  rm -rf /var/lib/apt/lists/*
 
 
 RUN whoami
