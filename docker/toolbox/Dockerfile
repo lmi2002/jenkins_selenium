@@ -19,9 +19,7 @@ apt update && \
 apt install -y ${PACKAGES} && \
 apt autoremove
 
-RUN \
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-  echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 RUN whoami
 
