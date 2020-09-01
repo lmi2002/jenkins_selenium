@@ -21,10 +21,9 @@ apt update && \
 apt install -y ${PACKAGES} && \
 apt autoremove
 
-RUN \
-  curl ${CHROME} -o chrome.deb -s ; \
-  dpkg -i chrome.deb && \
-  rm chrome.deb
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+
 
 RUN whoami
 
