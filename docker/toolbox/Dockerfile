@@ -5,6 +5,7 @@ ENV PACKAGES="\
   python3.7 \
   unzip \
   wget \
+  git \
   xdg-utils \
   xvfb \
 "
