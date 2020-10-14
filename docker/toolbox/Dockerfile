@@ -5,7 +5,7 @@ ENV CHROME="\
 
 RUN apt-get update
 
-RUN apt-get install pip
+RUN apt-get install pip3
 
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
