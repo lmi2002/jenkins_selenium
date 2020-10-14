@@ -1,9 +1,7 @@
-FROM ubuntu:18.04
+FROM python
 
 ENV CHROME="\
   https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-
-RUN apt-get install python 3.6.0
 
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
