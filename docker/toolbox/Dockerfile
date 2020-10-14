@@ -8,8 +8,6 @@ RUN apt-get install software-properties-common && \
     apt-get update && \
     apt-get install python-pip
 
-RUN apt-get install pip3
-
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
 WORKDIR /home/jenkins_selenium
