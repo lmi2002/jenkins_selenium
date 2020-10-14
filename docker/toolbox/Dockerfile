@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 ENV CHROME="\
   https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
-RUN apt-get install curl
+RUN sudo apt-get install curl
 
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
