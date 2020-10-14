@@ -1,11 +1,15 @@
-FROM python
+FROM ubuntu:18.04
 
 ENV CHROME="\
   https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
+RUN apt-get install pip3
+
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
-WORKDIR /usr/jenkins_selenium
+WORKDIR /home/jenkins_selenium
+
+RUN pip3 install --no-cache-dir -r ./requirements.txt
 
 # Install Google Chrome
 RUN \
