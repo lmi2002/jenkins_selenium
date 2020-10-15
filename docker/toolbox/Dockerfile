@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 FROM python:3
 
 # Packages for Google Chrome
+RUN apt-get update
 RUN apt-get install -y  \
     gconf-service \
     libasound2 \
