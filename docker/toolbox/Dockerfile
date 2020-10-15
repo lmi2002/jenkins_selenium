@@ -12,6 +12,7 @@ RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
 # Install Google Chrome
 RUN  curl ${CHROME} -s -o chrome.deb
+RUN apt-get install -f
 RUN  dpkg -i chrome.deb
 RUN  rm chrome.deb
 
