@@ -11,10 +11,9 @@ RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
 # Install Google Chrome
-RUN \
-  curl ${CHROME} -s -o chrome.deb && \
-  dpkg -i chrome.deb && \
-  rm chrome.deb
+RUN  curl ${CHROME} -s -o chrome.deb
+RUN  dpkg -i chrome.deb
+RUN  rm chrome.deb
 
 # Install Chrome WebDriver
 RUN \
