@@ -1,6 +1,9 @@
-pytets==5.2.4
+requests==2.22.0
 selenium==3.141.0
-xvfb
+pytest<5.3.0
+pytest-xvfb==2.0.0
+pytest-xdist==1.30.0
+pytest-check==0.3.7
 
 
 
