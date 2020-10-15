@@ -6,9 +6,9 @@ ENV CHROME="\
 
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
-WORKDIR /home/jenkins_selenium
+# WORKDIR /home/jenkins_selenium
 
-RUN pip3 install --no-cache-dir -r ./requirements.txt
+# RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Install Google Chrome
 RUN \
