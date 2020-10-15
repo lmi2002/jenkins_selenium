@@ -1,10 +1,7 @@
-pip==20.2.3
 pytets==5.2.4
 selenium==3.141.0
 xvfb
-curl
-unzip
-git
+
 
 
 
