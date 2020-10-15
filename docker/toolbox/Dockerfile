@@ -25,7 +25,7 @@ RUN apt-get install -y  \
 # Install Google Chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb
-RUN dpkg -r google-chrome-stable_current_amd64.deb
+RUN apt-get remove google-chrome-stable_current_amd64
 
 RUN \
   CHROMEDRIVER_VERSION = curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE && \
