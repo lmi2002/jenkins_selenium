@@ -8,8 +8,8 @@ RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
 # Install Google Chrome
-RUN apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN apt-get install -f
 RUN dpkg -i --force-depends google-chrome-stable_current_amd64.deb
 
 # Install Chrome WebDriver
