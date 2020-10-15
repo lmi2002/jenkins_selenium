@@ -8,7 +8,7 @@ WORKDIR /home/
 
 RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
-RUN pip3 install -r ./jenkins_selenium/requirements.txt
+# RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
 # Install Google Chrome
 # RUN \
