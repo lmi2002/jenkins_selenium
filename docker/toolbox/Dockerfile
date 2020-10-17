@@ -7,11 +7,11 @@ FROM python:3
 
 # RUN pip3 install -r requirements.txt
 
-RUN whoami && \
-    pwd && \
-    cd /var/lib/jenkins/workspace/jenkins_selenium && \
-    pwd && \
-    ls -l
+RUN whoami
+RUN pwd
+WORKDIR  /var/lib/jenkins/workspace/jenkins_selenium
+RUN pwd
+RUN ls -l
 
 
 
