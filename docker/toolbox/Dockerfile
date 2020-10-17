@@ -7,7 +7,7 @@ WORKDIR /var/lib/jenkins/workspace/jenkins_selenium
 
 RUN pwd
 
-RUN pip3 install -r ../requirements.txt
+RUN pip3 install -r /var/lib/jenkins/workspace/jenkins_selenium/requirements.txt
 
 # WORKDIR ~/jenkins_selenium/selenium_test/tests
 
