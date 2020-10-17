@@ -1,17 +1,14 @@
 # FROM ubuntu:18.04
 FROM python:3
 
-# WORKDIR /home
+WORKDIR /home
 
-# RUN git clone https://github.com/lmi2002/jenkins_selenium.git
+RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
-# RUN pip3 install -r requirements.txt
 
-RUN whoami
-RUN pwd
-WORKDIR  /var/lib/jenkins/workspace/jenkins_selenium/ddd
-RUN pwd
-RUN ls -l
+RUN pip3 install -r /jenkins_selenium/requirements.txt
+
+
 
 
 
