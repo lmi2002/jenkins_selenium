@@ -9,9 +9,11 @@ COPY /var/lib/jenkins/workspace/jenkins_seleniume /home/
 
 WORKDIR /home/jenkins_selenium
 
+RUN pwd
+
 RUN pip3 install -r requirements.txt
 
-RUN pwd
+
 
 # WORKDIR ~/jenkins_selenium/selenium_test/tests
 
