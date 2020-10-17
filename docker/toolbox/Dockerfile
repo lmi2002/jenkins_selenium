@@ -9,7 +9,7 @@ FROM python:3
 
 RUN whoami
 RUN pwd
-WORKDIR  /var/lib/jenkins/workspace/jenkins_selenium
+WORKDIR  /var/lib/jenkins/workspace/jenkins_selenium/ddd
 RUN pwd
 RUN ls -l
 
