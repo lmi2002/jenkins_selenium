@@ -3,9 +3,9 @@ FROM python:3
 
 # RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
-WORKDIR /var/lib/jenkins/workspace/jenkins_selenium/
+WORKDIR /var/lib/jenkins/workspace/jenkins_selenium
 
-RUN pip3 install -r ./requirements.txt
+RUN pip3 install -r requirements.txt
 
 # WORKDIR ~/jenkins_selenium/selenium_test/tests
 
