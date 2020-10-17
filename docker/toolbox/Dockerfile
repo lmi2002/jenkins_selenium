@@ -7,7 +7,9 @@ RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
 RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
+WORKDIR ~/jenkins_selenium/selenium_test/tests/
 
+CMD ["pytest test_exist.py"]
 
 
 
