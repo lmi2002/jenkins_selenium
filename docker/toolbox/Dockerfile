@@ -3,7 +3,7 @@ FROM python:3
 
 # RUN git clone https://github.com/lmi2002/jenkins_selenium.git
 
-RUN echo pwd
+RUN pwd
 
 # RUN pip3 install -r ../../requirements.txt
 
