@@ -9,7 +9,7 @@ RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
 WORKDIR ./jenkins_selenium/selenium_test/tests
 
-CMD ['pytest -m "api"']
+CMD ["pytest -m api"]
 
 
 
