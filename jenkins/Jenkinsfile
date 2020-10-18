@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Reports') {
             steps {
+                echo " ============== setting allure reports =================="
                 allure([
                     includeProperties: false,
                     jdk: '',
