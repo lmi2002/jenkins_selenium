@@ -20,8 +20,6 @@ pipeline {
                 	sh 'docker run --rm jenkins_selenium'
             }
         }
-    }
-    stages('Reports') {
         stage {
             steps {
                 echo " ============== setting allure reports =================="
