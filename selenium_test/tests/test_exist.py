@@ -16,3 +16,12 @@ class TestExample(SettingBrowser):
     @pytest.mark.api
     def test_exist(self):
         assert requests.get('https://exist.ua/').status_code == 200
+
+    @pytest.mark.api
+    def test_ukrnet(self):
+        assert requests.get('https://www.ukr.net/').status_code == 200
+
+    @pytest.mark.api
+    def test_invalid(self):
+        r = False
+        assert r
