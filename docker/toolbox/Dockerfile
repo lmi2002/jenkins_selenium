@@ -8,7 +8,7 @@ RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
 WORKDIR ./jenkins_selenium/selenium_test/tests
 
-CMD ["pytest", "-s", "-v", "-m", "api"]
+CMD ["pytest", "--alluredir", "../result", "-m", "api"]
 
 
 

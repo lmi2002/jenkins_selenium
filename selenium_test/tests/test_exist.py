@@ -1,5 +1,6 @@
 import pytest
 import requests
+import allure
 
 from selenium_test.settings.setting_browser import SettingBrowser
 
@@ -15,13 +16,19 @@ class TestExample(SettingBrowser):
 
     @pytest.mark.api
     def test_exist(self):
-        assert requests.get('https://exist.ua/').status_code == 200
+        with allure.step('Request'):
+            assert requests.get('https://exist.ua/').status_code == 200
 
     @pytest.mark.api
+    @allure.feature('check Api')
+    @allure.story('status code')
     def test_ukrnet(self):
-        assert requests.get('https://www.ukr.net/').status_code == 200
+        with allure.step('Request'):
+            assert requests.get('https://www.ukr.net/').status_code == 200
 
     @pytest.mark.api
+    @allure.feature('check Api')
+    @allure.story('status code')
     def test_invalid(self):
         r = False
         assert r
