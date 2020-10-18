@@ -20,5 +20,14 @@ pipeline {
                 	sh 'docker run --rm jenkins_selenium'
             }
         }
+        stage('Reports') {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+                ])
+        }
     }
 }
