@@ -6,18 +6,6 @@ pipeline {
      }
 
     stages {
-        stage('Reports') {
-            steps {
-                echo " ============== setting allure reports =================="
-                allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'target/allure-results']]
-                ])
-            }
-        }
         stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
@@ -31,6 +19,18 @@ pipeline {
                 echo " ============== run docker container =================="
                 	sh 'docker run --rm jenkins_selenium'
             }
+        }
+    }
+    stage('Reports') {
+        steps {
+            echo " ============== setting allure reports =================="
+            allure([
+                includeProperties: false,
+                jdk: '',
+                properties: [],
+                reportBuildPolicy: 'ALWAYS',
+                results: [[path: 'target/allure-results']]
+            ])
         }
     }
 }
