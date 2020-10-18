@@ -19,7 +19,7 @@ pipeline {
                 script {
                     try {
                         echo " ============== run docker container =================="
-                	    sh 'docker run --rm jenkins_selenium'
+                	    sh 'docker run jenkins_selenium'
                     }
                     finally {
                         allure([
