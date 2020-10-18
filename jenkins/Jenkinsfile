@@ -16,21 +16,19 @@ pipeline {
         }
         stage("run docker container") {
             steps {
-                script {
-                    try {
-                        echo " ============== run docker container =================="
-                	    sh 'docker run jenkins_selenium'
-                    }
-                    finally {
-                        allure([
-                            includeProperties: false,
-                            jdk: '',
-                            properties: [],
-                            reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'target/allure-results']]
-                        ])
-                    }
-               }
+                echo " ============== run docker container =================="
+                sh 'docker run jenkins_selenium'
+            }
+        }
+        post {
+            always {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+                ])
             }
         }
     }
