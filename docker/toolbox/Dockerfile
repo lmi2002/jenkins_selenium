@@ -1,4 +1,3 @@
-# FROM ubuntu:18.04
 FROM python:3
 
 WORKDIR /home
@@ -9,7 +8,7 @@ RUN pip3 install -r ./jenkins_selenium/requirements.txt
 
 WORKDIR ./jenkins_selenium/selenium_test/tests
 
-CMD ["pytest", "-m", "api"]
+CMD ["pytest", "-s", "-v", "-m", "api"]
 
 
 
