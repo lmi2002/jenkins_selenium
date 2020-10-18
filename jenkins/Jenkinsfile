@@ -21,16 +21,17 @@ pipeline {
             }
         }
     }
-    stage('Reports') {
-        steps {
-            echo " ============== setting allure reports =================="
-            allure([
-                includeProperties: false,
-                jdk: '',
-                properties: [],
-                reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'target/allure-results']]
-            ])
+    stages('Reports') {
+        stage {
+            steps {
+                echo " ============== setting allure reports =================="
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+            }    ])
         }
     }
 }
